@@ -59,7 +59,7 @@ namespace Salesapp.Controllers
 
 
                 string sql = "update Rims set Rim_quantity = Rim_quantity - @sold_quantity where hub_id= @hub_id and peg_id = @peg_id and type_id = @type_id and size_id = @size_id";
-                using (var sqlCon = new SqlConnection(@"Data Source=LAPTOP-L99NV78V\LAYANSQL;Initial Catalog=SalesLayan;User ID=sa;Password=Layangrade@17;"))
+                using (var sqlCon = new SqlConnection(@"Data Source=sourcename;Initial Catalog=SalesLayan;User ID=sa;Password=Password;"))
                 using (var cmd = new SqlCommand(sql, sqlCon))
                 {
                     //Have to guess at types and lengths here. Use actual types and lengths from the database
