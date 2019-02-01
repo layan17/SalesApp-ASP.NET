@@ -61,7 +61,7 @@ namespace Salesapp.Controllers
 
                 
                 string sql = "update battery set batt_quantity = batt_quantity - @sold_quantity where supplier_id= @supplier_id and size_id = @size and terminal_id = @terminal_id and height_id = @height_id";
-                using (var sqlCon = new SqlConnection(@"Data Source=LAPTOP-L99NV78V\LAYANSQL;Initial Catalog=SalesLayan;User ID=sa;Password=Layangrade@17;"))
+                using (var sqlCon = new SqlConnection(@"Data Source=servername;Initial Catalog=SalesLayan;User ID=sa;Password=password;"))
                 using (var cmd = new SqlCommand(sql, sqlCon))
                 {
                     //Have to guess at types and lengths here. Use actual types and lengths from the database
